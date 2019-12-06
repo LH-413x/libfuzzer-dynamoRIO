@@ -1,0 +1,36 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess
+CMake Deprecation Warning at dynamoRIO/CMakeLists.txt:6 (cmake_policy):
+  The OLD behavior for policy CMP0026 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DrMemoryFrameworkConfig.cmake:28 (cmake_policy):
+  The OLD behavior for policy CMP0024 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+Call Stack (most recent call first):
+  dynamoRIO/CMakeLists.txt:18 (find_package)
+
+
+CMake Warning (dev) in CMakeLists.txt:
+  No cmake_minimum_required command is present.  A line of code such as
+
+    cmake_minimum_required(VERSION 3.10)
+
+  should be added at the top of the file.  The version specified may be lower
+  if you wish to support older CMake versions for this project.  For more
+  information run "cmake --help-policy CMP0000".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug

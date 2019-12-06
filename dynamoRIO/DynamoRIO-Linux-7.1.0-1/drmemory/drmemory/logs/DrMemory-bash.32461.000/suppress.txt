@@ -1,0 +1,16 @@
+# Suppression for Error #1
+LEAK
+name=Error #1 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!set_default_locale
+bash!main
+
+## Mod+offs-style suppression for Error #1:
+LEAK
+name=Error #1 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x80b3b>
+<bash+0x2fe67>
+

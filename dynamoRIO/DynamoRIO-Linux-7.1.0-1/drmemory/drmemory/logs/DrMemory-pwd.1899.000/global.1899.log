@@ -1,0 +1,56 @@
+process=1899, parent=32681
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+start time: 3671862:43:31.287 == 06:43:31.287 11/20/2019
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+new thread #0 id=1899
+WARNING: symbol cache file has wrong version
+
+module load event: "libdrmemorylib.so" 0x0000000073800000-0x0000000073b4d000 modid: 1 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/release/libdrmemorylib.so
+WARNING: symbol cache file has wrong version
+
+module load event: "pwd" 0x00007fee61a30000-0x00007fee61c39000 modid: 2 /bin/pwd
+WARNING: unable to load symbols for /bin/pwd
+WARNING: symbol cache file has wrong version
+
+module load event: "ld-linux-x86-64.so.2" 0x00007fee65a0f000-0x00007fee65c39000 modid: 3 /lib/x86_64-linux-gnu/ld-2.27.so
+WARNING: symbol cache file has wrong version
+
+module load event: "libdynamorio.so" 0x00007fee65c3a000-0x00007fee66006000 modid: 4 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/lib64/release/libdynamorio.so
+WARNING: unable to open [vdso]
+WARNING: symbol cache file has wrong version
+
+module load event: "linux-vdso.so.1" 0x00007ffff3b7c000-0x00007ffff3b7e000 modid: 5 [vdso]
+WARNING: symbol cache file has wrong version
+
+module load event: "libc.so.6" 0x00007fee64633000-0x00007fee64a24000 modid: 6 /lib/x86_64-linux-gnu/libc-2.27.so
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     2x (leaked    4504 bytes): default (ld-linux stores index+1)
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      0 ignored assumed-innocuous system leak(s)
+     20 unique,    59 total,  14855 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-pwd.1899.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+NO POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-pwd.1899.000/potential_errors.txt
+Exiting @0:00:00.422 in thread 1899
+LOG END

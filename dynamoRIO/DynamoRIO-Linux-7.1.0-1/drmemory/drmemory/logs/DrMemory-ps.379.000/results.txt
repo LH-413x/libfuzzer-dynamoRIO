@@ -1,0 +1,207 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+Dr. Memory results for pid 379: "ps"
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+
+Error #1: REACHABLE LEAK 1425 direct bytes 0x00007f96901491a0-0x00007f9690149731 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #2: REACHABLE LEAK 1169 direct bytes 0x00007f9690149760-0x00007f9690149bf1 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #3: REACHABLE LEAK 16 direct bytes 0x00007f9690149c20-0x00007f9690149c30 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #4: REACHABLE LEAK 158 direct bytes 0x00007f9690149c50-0x00007f9690149cee + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #5: REACHABLE LEAK 40 direct bytes 0x00007f9690149d10-0x00007f9690149d38 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #6: REACHABLE LEAK 320 direct bytes 0x00007f9690149d60-0x00007f9690149ea0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #7: REACHABLE LEAK 37 direct bytes 0x00007f9690149ec0-0x00007f9690149ee5 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #8: REACHABLE LEAK 1183 direct bytes 0x00007f9690149f10-0x00007f969014a3af + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #9: REACHABLE LEAK 37 direct bytes 0x00007f969014a3d0-0x00007f969014a3f5 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #10: REACHABLE LEAK 56 direct bytes 0x00007f969014b420-0x00007f969014b458 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #11: REACHABLE LEAK 200 direct bytes 0x00007f969014d860-0x00007f969014d928 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #12: REACHABLE LEAK 240 direct bytes 0x00007f969014d950-0x00007f969014da40 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #13: REACHABLE LEAK 1056 direct bytes 0x00007f969014ec30-0x00007f969014f050 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #14: REACHABLE LEAK 37 direct bytes 0x00007f96901502e0-0x00007f9690150305 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #15: REACHABLE LEAK 120 direct bytes 0x00007f96901509d0-0x00007f9690150a48 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #16: REACHABLE LEAK 12 direct bytes 0x00007f9690150a70-0x00007f9690150a7c + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #17: REACHABLE LEAK 784 direct bytes 0x00007f9690150aa0-0x00007f9690150db0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #18: REACHABLE LEAK 12 direct bytes 0x00007f9690151af0-0x00007f9690151afc + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #19: REACHABLE LEAK 34 direct bytes 0x00007f9690152fc0-0x00007f9690152fe2 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #20: REACHABLE LEAK 10 direct bytes 0x00007f9690153010-0x00007f969015301a + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #21: REACHABLE LEAK 8 direct bytes 0x00007f9690153460-0x00007f9690153468 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #22: REACHABLE LEAK 12 direct bytes 0x00007f96901535f0-0x00007f96901535fc + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #23: REACHABLE LEAK 281 direct bytes 0x00007f9690153620-0x00007f9690153739 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #24: REACHABLE LEAK 1600 direct bytes 0x00007f9690154a30-0x00007f9690155070 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #25: REACHABLE LEAK 2048 direct bytes 0x00007f96901554b0-0x00007f9690155cb0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #26: REACHABLE LEAK 60 direct bytes 0x00007f9690155d00-0x00007f9690155d3c + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #27: REACHABLE LEAK 168 direct bytes 0x00007f9690155d60-0x00007f9690155e08 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #28: REACHABLE LEAK 55 direct bytes 0x00007f9690155e30-0x00007f9690155e67 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #29: REACHABLE LEAK 104 direct bytes 0x00007f9690155e90-0x00007f9690155ef8 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #30: REACHABLE LEAK 49 direct bytes 0x00007f9690155f20-0x00007f9690155f51 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #31: REACHABLE LEAK 72 direct bytes 0x00007f9690155f80-0x00007f9690155fc8 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #32: REACHABLE LEAK 46 direct bytes 0x00007f9690155ff0-0x00007f969015601e + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #33: REACHABLE LEAK 56 direct bytes 0x00007f9690156040-0x00007f9690156078 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #34: REACHABLE LEAK 55 direct bytes 0x00007f96901560a0-0x00007f96901560d7 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #35: REACHABLE LEAK 56 direct bytes 0x00007f9690156100-0x00007f9690156138 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #36: REACHABLE LEAK 58 direct bytes 0x00007f96901561c0-0x00007f96901561fa + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #37: REACHABLE LEAK 72 direct bytes 0x00007f9690156220-0x00007f9690156268 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #38: REACHABLE LEAK 64 direct bytes 0x00007f96901567d0-0x00007f9690156810 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #39: REACHABLE LEAK 104 direct bytes 0x00007f9690156830-0x00007f9690156898 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #40: REACHABLE LEAK 69 direct bytes 0x00007f9690157e80-0x00007f9690157ec5 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #41: REACHABLE LEAK 168 direct bytes 0x00007f9690157ef0-0x00007f9690157f98 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #42: REACHABLE LEAK 48 direct bytes 0x00007f9690158840-0x00007f9690158870 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #43: REACHABLE LEAK 4 direct bytes 0x00007f9690158890-0x00007f9690158894 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #44: REACHABLE LEAK 48 direct bytes 0x00007f96901588c0-0x00007f96901588f0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #45: REACHABLE LEAK 5 direct bytes 0x00007f9690158910-0x00007f9690158915 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #46: REACHABLE LEAK 48 direct bytes 0x00007f9690158940-0x00007f9690158970 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #47: REACHABLE LEAK 4 direct bytes 0x00007f9690158990-0x00007f9690158994 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #48: REACHABLE LEAK 48 direct bytes 0x00007f96901589c0-0x00007f96901589f0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #49: REACHABLE LEAK 4 direct bytes 0x00007f9690158a10-0x00007f9690158a14 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #50: REACHABLE LEAK 2048 direct bytes 0x00007f96901615f0-0x00007f9690161df0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #51: REACHABLE LEAK 40 direct bytes 0x00007f9690163650-0x00007f9690163678 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #52: REACHABLE LEAK 32 direct bytes 0x00007f96901639c0-0x00007f96901639e0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #53: REACHABLE LEAK 208 direct bytes 0x00007f9690163a00-0x00007f9690163ad0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #54: REACHABLE LEAK 208 direct bytes 0x00007f9690163af0-0x00007f9690163bc0 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #55: REACHABLE LEAK 131072 direct bytes 0x00007f96910a0030-0x00007f96910c0030 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+Error #56: REACHABLE LEAK 131072 direct bytes 0x00007f96910c1030-0x00007f96910e1030 + 0 indirect bytes
+<memory was allocated before tool took control>
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   7:     10
+	Error #   8:     10
+	Error #   9:     10
+	Error #  10:     10
+	Error #  12:     13
+	Error #  15:      2
+	Error #  16:      2
+	Error #  17:     24
+	Error #  18:     11
+	Error #  28:      3
+	Error #  29:      3
+	Error #  30:      3
+	Error #  31:      3
+	Error #  36:      3
+	Error #  37:      3
+	Error #  38:      3
+	Error #  39:      3
+	Error #  51:     11
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+     56 unique,   165 total, 301505 byte(s) of still-reachable allocation(s)
+NO ERRORS IGNORED
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-ps.379.000/results.txt

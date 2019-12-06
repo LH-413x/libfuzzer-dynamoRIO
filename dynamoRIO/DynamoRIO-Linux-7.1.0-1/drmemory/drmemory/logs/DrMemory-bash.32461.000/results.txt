@@ -1,0 +1,26 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+
+Error #1: LEAK 281 direct bytes 0x00007fc938ed3670-0x00007fc938ed3789 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 set_default_locale              +0x2a     (0x00007fc938c32b3b <bash+0x80b3b>)
+# 3 main                            +0xb6     (0x00007fc938be1e67 <bash+0x2fe67>)
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    281 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+    494 unique,  1201 total,  84088 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32461.000/results.txt

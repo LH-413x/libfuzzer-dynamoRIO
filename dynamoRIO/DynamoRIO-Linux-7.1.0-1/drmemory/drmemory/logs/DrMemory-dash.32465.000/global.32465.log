@@ -1,0 +1,105 @@
+process=32465, parent=32464
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+new thread #2 id=32465
+new logfile after fork
+start time: 3671862:31:04.923 == 06:31:04.923 11/20/2019
+
+Error #1: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a826b <libc.so.6+0x18a26b>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+# 5 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+# 6 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+# 7 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 8 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 9 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#10 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+#11 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+#12 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+#13 dash!?    (0x00007f23c890b305 <dash+0x7305>) modid:2
+#14 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#15 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#16 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#17 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#18 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#19 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+Note: @0:00:00.003 in thread 32465
+Note: instruction: test   %edx %edx
+	error end
+
+Error #2: UNINITIALIZED READ: reading register esi
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8248 <libc.so.6+0x18a248>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+# 5 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+# 6 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+# 7 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 8 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 9 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#10 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+#11 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+#12 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+#13 dash!?    (0x00007f23c890b305 <dash+0x7305>) modid:2
+#14 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#15 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#16 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#17 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#18 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#19 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+Note: @0:00:00.003 in thread 32465
+Note: instruction: test   %esi %esi
+	error end
+
+Error #3: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a826b <libc.so.6+0x18a26b>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+# 6 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+# 7 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+# 8 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 9 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#10 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#11 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+#12 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+#13 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+#14 dash!?    (0x00007f23c890b305 <dash+0x7305>) modid:2
+#15 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#16 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#17 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#18 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#19 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+Note: @0:00:00.004 in thread 32465
+Note: instruction: test   %edx %edx
+	error end
+
+Error #4: UNINITIALIZED READ: reading register esi
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8248 <libc.so.6+0x18a248>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+# 6 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+# 7 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+# 8 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 9 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#10 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#11 dash!?    (0x00007f23c890b8f3 <dash+0x78f3>) modid:2
+#12 dash!?    (0x00007f23c890e7fc <dash+0xa7fc>) modid:2
+#13 dash!?    (0x00007f23c890eae1 <dash+0xaae1>) modid:2
+#14 dash!?    (0x00007f23c890b305 <dash+0x7305>) modid:2
+#15 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#16 dash!?    (0x00007f23c890a592 <dash+0x6592>) modid:2
+#17 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#18 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+#19 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+Note: @0:00:00.004 in thread 32465
+Note: instruction: test   %esi %esi
+	error end

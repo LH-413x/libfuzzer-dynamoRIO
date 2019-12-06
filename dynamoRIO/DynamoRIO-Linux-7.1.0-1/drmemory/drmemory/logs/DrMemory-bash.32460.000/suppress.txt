@@ -1,0 +1,1196 @@
+# File for suppressing errors found in pid 32460: "bash"
+
+# Suppression for Error #1
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+libdrmemorylib.so!replace_strlen
+libc.so.6!__gethostname
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #1:
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+<libdrmemorylib.so+0xde5eb>
+<libc.so.6+0x116e76>
+<bash+0x2cec8>
+<bash+0x306e1>
+
+# Suppression for Error #2
+UNINITIALIZED READ
+name=Error #2 (update to meaningful name)
+libdrmemorylib.so!replace_strcpy
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #2:
+UNINITIALIZED READ
+name=Error #2 (update to meaningful name)
+<libdrmemorylib.so+0xdea78>
+<bash+0x2cefd>
+<bash+0x306e1>
+
+# Suppression for Error #3
+UNINITIALIZED READ
+name=Error #3 (update to meaningful name)
+bash!make_variable_value
+bash!*
+bash!initialize_shell_variables
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #3:
+UNINITIALIZED READ
+name=Error #3 (update to meaningful name)
+<bash+0x4b847>
+<bash+0x4ca56>
+<bash+0x4ef76>
+<bash+0x2cf6e>
+<bash+0x306e1>
+
+# Suppression for Error #4
+UNINITIALIZED READ
+name=Error #4 (update to meaningful name)
+libdrmemorylib.so!replace_strlen
+bash!make_variable_value
+bash!*
+bash!initialize_shell_variables
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #4:
+UNINITIALIZED READ
+name=Error #4 (update to meaningful name)
+<libdrmemorylib.so+0xde5eb>
+<bash+0x4ba60>
+<bash+0x4ca56>
+<bash+0x4ef76>
+<bash+0x2cf6e>
+<bash+0x306e1>
+
+# Suppression for Error #5
+UNINITIALIZED READ
+name=Error #5 (update to meaningful name)
+libdrmemorylib.so!replace_strcpy
+bash!make_variable_value
+bash!*
+bash!initialize_shell_variables
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #5:
+UNINITIALIZED READ
+name=Error #5 (update to meaningful name)
+<libdrmemorylib.so+0xdea78>
+<bash+0x4ba74>
+<bash+0x4ca56>
+<bash+0x4ef76>
+<bash+0x2cf6e>
+<bash+0x306e1>
+
+# Suppression for Error #6
+UNINITIALIZED READ
+name=Error #6 (update to meaningful name)
+bash!initialize_job_control
+bash!_init
+bash!main
+
+## Mod+offs-style suppression for Error #6:
+UNINITIALIZED READ
+name=Error #6 (update to meaningful name)
+<bash+0x5998c>
+<bash+0x2cf79>
+<bash+0x306e1>
+
+# Suppression for Error #7
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #7:
+UNADDRESSABLE ACCESS
+name=Error #7 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b26>
+
+# Suppression for Error #8
+UNADDRESSABLE ACCESS
+name=Error #8 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #8:
+UNADDRESSABLE ACCESS
+name=Error #8 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b26>
+
+# Suppression for Error #9
+UNADDRESSABLE ACCESS
+name=Error #9 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #9:
+UNADDRESSABLE ACCESS
+name=Error #9 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b26>
+
+# Suppression for Error #10
+UNADDRESSABLE ACCESS
+name=Error #10 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #10:
+UNADDRESSABLE ACCESS
+name=Error #10 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b26>
+
+# Suppression for Error #11
+UNADDRESSABLE ACCESS
+name=Error #11 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #11:
+UNADDRESSABLE ACCESS
+name=Error #11 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b26>
+
+# Suppression for Error #12
+UNADDRESSABLE ACCESS
+name=Error #12 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #12:
+UNADDRESSABLE ACCESS
+name=Error #12 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #13
+UNADDRESSABLE ACCESS
+name=Error #13 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #13:
+UNADDRESSABLE ACCESS
+name=Error #13 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #14
+UNADDRESSABLE ACCESS
+name=Error #14 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #14:
+UNADDRESSABLE ACCESS
+name=Error #14 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #15
+UNADDRESSABLE ACCESS
+name=Error #15 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #15:
+UNADDRESSABLE ACCESS
+name=Error #15 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #16
+UNADDRESSABLE ACCESS
+name=Error #16 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #16:
+UNADDRESSABLE ACCESS
+name=Error #16 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #17
+UNADDRESSABLE ACCESS
+name=Error #17 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+
+## Mod+offs-style suppression for Error #17:
+UNADDRESSABLE ACCESS
+name=Error #17 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+
+# Suppression for Error #18
+UNADDRESSABLE ACCESS
+name=Error #18 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #18:
+UNADDRESSABLE ACCESS
+name=Error #18 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #19
+UNADDRESSABLE ACCESS
+name=Error #19 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #19:
+UNADDRESSABLE ACCESS
+name=Error #19 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #20
+UNADDRESSABLE ACCESS
+name=Error #20 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #20:
+UNADDRESSABLE ACCESS
+name=Error #20 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #21
+UNADDRESSABLE ACCESS
+name=Error #21 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+
+## Mod+offs-style suppression for Error #21:
+UNADDRESSABLE ACCESS
+name=Error #21 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x46d11>
+<bash+0x47bf2>
+<bash+0x46d11>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+
+# Suppression for Error #22
+UNADDRESSABLE ACCESS
+name=Error #22 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #22:
+UNADDRESSABLE ACCESS
+name=Error #22 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #23
+UNADDRESSABLE ACCESS
+name=Error #23 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #23:
+UNADDRESSABLE ACCESS
+name=Error #23 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x46622>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #24
+UNADDRESSABLE ACCESS
+name=Error #24 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #24:
+UNADDRESSABLE ACCESS
+name=Error #24 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8cfd7>
+<bash+0x30b37>
+
+# Suppression for Error #25
+UNADDRESSABLE ACCESS
+name=Error #25 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+
+## Mod+offs-style suppression for Error #25:
+UNADDRESSABLE ACCESS
+name=Error #25 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x46d11>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+
+# Suppression for Error #26
+UNADDRESSABLE ACCESS
+name=Error #26 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+
+## Mod+offs-style suppression for Error #26:
+UNADDRESSABLE ACCESS
+name=Error #26 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+
+# Suppression for Error #27
+UNADDRESSABLE ACCESS
+name=Error #27 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command_internal
+bash!*
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+
+## Mod+offs-style suppression for Error #27:
+UNADDRESSABLE ACCESS
+name=Error #27 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x45f48>
+<bash+0x48a79>
+<bash+0x2e208>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x4713d>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+
+# Suppression for Error #28
+UNADDRESSABLE ACCESS
+name=Error #28 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+bash!source_file
+bash!source_builtin
+bash!_init
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!parse_and_execute
+bash!*
+
+## Mod+offs-style suppression for Error #28:
+UNADDRESSABLE ACCESS
+name=Error #28 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+<bash+0x8d077>
+<bash+0x97449>
+<bash+0x2d4bf>
+<bash+0x2e1e9>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x46d11>
+<bash+0x47bf2>
+<bash+0x4666b>
+<bash+0x8d8e8>
+<bash+0x8cebe>
+
+# Suppression for Error #29
+UNINITIALIZED READ
+name=Error #29 (update to meaningful name)
+libdrmemorylib.so!replace_strlen
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #29:
+UNINITIALIZED READ
+name=Error #29 (update to meaningful name)
+<libdrmemorylib.so+0xde5eb>
+<bash+0x3409f>
+
+# Suppression for Error #30
+UNINITIALIZED READ
+name=Error #30 (update to meaningful name)
+libdrmemorylib.so!replace_strcpy
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #30:
+UNINITIALIZED READ
+name=Error #30 (update to meaningful name)
+<libdrmemorylib.so+0xdea78>
+<bash+0x340b3>
+
+# Suppression for Error #31
+UNINITIALIZED READ
+name=Error #31 (update to meaningful name)
+libdrmemorylib.so!replace_strchr
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #31:
+UNINITIALIZED READ
+name=Error #31 (update to meaningful name)
+<libdrmemorylib.so+0xde4bc>
+<bash+0x34465>
+
+# Suppression for Error #32
+UNINITIALIZED READ
+name=Error #32 (update to meaningful name)
+libdrmemorylib.so!replace_strchr
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #32:
+UNINITIALIZED READ
+name=Error #32 (update to meaningful name)
+<libdrmemorylib.so+0xde4c9>
+<bash+0x34465>
+
+# Suppression for Error #33
+UNINITIALIZED READ
+name=Error #33 (update to meaningful name)
+libdrmemorylib.so!replace_strlen
+bash!sh_backslash_quote_for_double_quotes
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #33:
+UNINITIALIZED READ
+name=Error #33 (update to meaningful name)
+<libdrmemorylib.so+0xde5eb>
+<bash+0xa9099>
+<bash+0x340e4>
+
+# Suppression for Error #34
+UNINITIALIZED READ
+name=Error #34 (update to meaningful name)
+bash!sh_backslash_quote_for_double_quotes
+bash!decode_prompt_string
+
+## Mod+offs-style suppression for Error #34:
+UNINITIALIZED READ
+name=Error #34 (update to meaningful name)
+<bash+0xa90c2>
+<bash+0x340e4>
+
+# Suppression for Error #35
+UNINITIALIZED READ
+name=Error #35 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+bash!*
+bash!rl_prep_terminal
+bash!readline
+bash!*
+bash!*
+bash!*
+bash!yyparse
+
+## Mod+offs-style suppression for Error #35:
+UNINITIALIZED READ
+name=Error #35 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+<bash+0xb209f>
+<bash+0xb25f6>
+<bash+0xad928>
+<bash+0x32759>
+<bash+0x34b3d>
+<bash+0x37b8a>
+<bash+0x3b308>
+
+# Suppression for Error #36
+UNINITIALIZED READ
+name=Error #36 (update to meaningful name)
+system call pselect6 pselect sigmask
+bash!rl_getc
+bash!rl_read_key
+bash!readline_internal_char
+bash!readline
+bash!*
+bash!*
+bash!*
+bash!yyparse
+
+## Mod+offs-style suppression for Error #36:
+UNINITIALIZED READ
+name=Error #36 (update to meaningful name)
+system call pselect6 pselect sigmask
+<bash+0xc4042>
+<bash+0xc48d4>
+<bash+0xad187>
+<bash+0xad945>
+<bash+0x32759>
+<bash+0x34b3d>
+<bash+0x37b8a>
+<bash+0x3b308>
+
+# Suppression for Error #37
+UNINITIALIZED READ
+name=Error #37 (update to meaningful name)
+system call pselect6 pselect sigmask
+bash!rl_getc
+bash!rl_read_key
+bash!rl_insert
+bash!_rl_dispatch_subseq
+bash!readline_internal_char
+bash!readline
+bash!*
+bash!*
+bash!*
+bash!yyparse
+
+## Mod+offs-style suppression for Error #37:
+UNINITIALIZED READ
+name=Error #37 (update to meaningful name)
+system call pselect6 pselect sigmask
+<bash+0xc4042>
+<bash+0xc48d4>
+<bash+0xc7b98>
+<bash+0xacce1>
+<bash+0xad1d3>
+<bash+0xad945>
+<bash+0x32759>
+<bash+0x34b3d>
+<bash+0x37b8a>
+<bash+0x3b308>
+
+# Suppression for Error #38
+UNINITIALIZED READ
+name=Error #38 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+bash!*
+bash!rl_deprep_terminal
+bash!readline
+bash!*
+bash!*
+bash!*
+bash!yyparse
+
+## Mod+offs-style suppression for Error #38:
+UNINITIALIZED READ
+name=Error #38 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+<bash+0xb209f>
+<bash+0xb224a>
+<bash+0xad967>
+<bash+0x32759>
+<bash+0x34b3d>
+<bash+0x37b8a>
+<bash+0x3b308>
+
+# Suppression for Error #39
+UNINITIALIZED READ
+name=Error #39 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+bash!set_tty_state
+bash!wait_for
+bash!execute_command_internal
+bash!execute_command
+bash!reader_loop
+bash!main
+
+## Mod+offs-style suppression for Error #39:
+UNINITIALIZED READ
+name=Error #39 (update to meaningful name)
+system call ioctl.0x5403 parameter #2
+<bash+0x56682>
+<bash+0x581ce>
+<bash+0x47b64>
+<bash+0x47bf2>
+<bash+0x32274>
+<bash+0x30c7f>
+
+# Suppression for Error #40
+UNINITIALIZED READ
+name=Error #40 (update to meaningful name)
+bash!*
+bash!end_job_control
+bash!exit_shell
+bash!main
+
+## Mod+offs-style suppression for Error #40:
+UNINITIALIZED READ
+name=Error #40 (update to meaningful name)
+<bash+0x577c0>
+<bash+0x5a891>
+<bash+0x31bf3>
+<bash+0x30c8a>
+
+# Suppression for Error #41
+LEAK
+name=Error #41 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!set_default_locale
+bash!main
+
+## Mod+offs-style suppression for Error #41:
+LEAK
+name=Error #41 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x80b3b>
+<bash+0x2fe67>
+
+# Suppression for Error #42
+LEAK
+name=Error #42 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!tilde_expand
+bash!bash_tilde_expand
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #42:
+LEAK
+name=Error #42 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0xce35e>
+<bash+0x3fa74>
+<bash+0x8cfbf>
+<bash+0x30b37>
+
+# Suppression for Error #43
+LEAK
+name=Error #43 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #43:
+LEAK
+name=Error #43 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x8cc91>
+<bash+0x8cfd7>
+<bash+0x30b37>
+

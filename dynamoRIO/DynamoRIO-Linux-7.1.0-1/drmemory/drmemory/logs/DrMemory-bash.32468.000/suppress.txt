@@ -1,0 +1,64 @@
+# Suppression for Error #1
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+bash!_init
+bash!execute_command_internal
+bash!parse_and_execute
+bash!command_substitute
+bash!*
+bash!*
+bash!*
+bash!*
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+bash!execute_command_internal
+bash!execute_command
+
+## Mod+offs-style suppression for Error #1:
+UNADDRESSABLE ACCESS
+name=Error #1 (update to meaningful name)
+<libc.so.6+0x18a1f4>
+<bash+0x2da01>
+<bash+0x460d8>
+<bash+0x8d8e8>
+<bash+0x61c4a>
+<bash+0x665c3>
+<bash+0x67886>
+<bash+0x6895e>
+<bash+0x6acfb>
+<bash+0x2da9b>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x47a2b>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+<bash+0x45fd7>
+<bash+0x47bf2>
+
+# Suppression for Error #2
+LEAK
+name=Error #2 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!set_default_locale
+bash!main
+
+## Mod+offs-style suppression for Error #2:
+LEAK
+name=Error #2 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x80b3b>
+<bash+0x2fe67>
+

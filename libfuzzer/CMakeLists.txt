@@ -1,0 +1,52 @@
+set(LIBFUZZER_SOURCES
+        FuzzerCrossOver.cpp
+        FuzzerDataFlowTrace.cpp
+        FuzzerDriver.cpp
+        FuzzerExtFunctionsDlsym.cpp
+        FuzzerExtFunctionsWeak.cpp
+        FuzzerExtFunctionsWindows.cpp
+        FuzzerExtraCounters.cpp
+        FuzzerFork.cpp
+        FuzzerIO.cpp
+        FuzzerIOPosix.cpp
+        FuzzerIOWindows.cpp
+        FuzzerLoop.cpp
+        FuzzerMain.cpp
+        FuzzerMerge.cpp
+        FuzzerMutate.cpp
+        FuzzerSHA1.cpp
+        FuzzerTracePC.cpp
+        FuzzerUtil.cpp
+        FuzzerUtilDarwin.cpp
+        FuzzerUtilFuchsia.cpp
+        FuzzerUtilLinux.cpp
+        FuzzerUtilPosix.cpp
+        FuzzerUtilWindows.cpp
+)
+
+set(LIBFUZZER_HEADERS
+        FuzzerBuiltins.h
+        FuzzerBuiltinsMsvc.h
+        FuzzerCommand.h
+        FuzzerCorpus.h
+        FuzzerDataFlowTrace.h
+        FuzzerDefs.h
+        FuzzerDictionary.h
+        FuzzerExtFunctions.def
+        FuzzerExtFunctions.h
+        FuzzerFlags.def
+        FuzzerFork.h
+        FuzzerIO.h
+        FuzzerInterface.h
+        FuzzerInternal.h
+        FuzzerMerge.h
+        FuzzerMutate.h
+        FuzzerOptions.h
+        FuzzerRandom.h
+        FuzzerSHA1.h
+        FuzzerTracePC.h
+        FuzzerUtil.h
+        FuzzerValueBitMap.h)
+
+add_executable(fuzzer ${LIBFUZZER_SOURCES})
+target_link_libraries(fuzzer pthread)

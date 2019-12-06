@@ -1,0 +1,87 @@
+process=32492, parent=32460
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+new thread #1 id=32492
+new logfile after fork
+start time: 3671862:31:59.392 == 06:31:59.392 11/20/2019
+
+Error #1: UNINITIALIZED READ: reading 0x00007fffd1ab7828-0x00007fffd1ab7830 8 byte(s)
+# 0 termsig_sighandler (0x00007fc938c22d62 <bash+0x70d62>) modid:2
+# 1 give_terminal_to (0x00007fc938c0997b <bash+0x5797b>) modid:2
+# 2 make_child (0x00007fc938c09bc7 <bash+0x57bc7>) modid:2
+# 3 _init (0x00007fc938be0572 <bash+0x2e572>) modid:2
+# 4 execute_command_internal (0x00007fc938bf80d8 <bash+0x460d8>) modid:2
+# 5 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+# 6 reader_loop (0x00007fc938be4274 <bash+0x32274>) modid:2
+# 7 main (0x00007fc938be2c7f <bash+0x30c7f>) modid:2
+Note: @0:00:15.496 in thread 32492
+Note: instruction: ret    %rsp (%rsp) -> %rsp
+	error end
+WARNING: heap buffer at 0x00007fc938649340 is of size 28427 bytes, which does not match the sysarg parameter #1 size of 28426 bytes.
+
+Error #2: LEAK 281 direct bytes 0x00007fc938ed3670-0x00007fc938ed3789 + 0 indirect bytes
+# 0 replace_malloc    [/drmemory_package/common/alloc_replace.c:2577] (0x00000000738482c0 <libdrmemorylib.so+0x482c0>) modid:1
+# 1 xmalloc (0x00007fc938c390de <bash+0x870de>) modid:2
+# 2 set_default_locale (0x00007fc938c32b3b <bash+0x80b3b>) modid:2
+# 3 main (0x00007fc938be1e67 <bash+0x2fe67>) modid:2
+	error end
+
+Error #3: LEAK 4 direct bytes 0x00007fc938ed7e10-0x00007fc938ed7e14 + 0 indirect bytes
+# 0 replace_malloc    [/drmemory_package/common/alloc_replace.c:2577] (0x00000000738482c0 <libdrmemorylib.so+0x482c0>) modid:1
+# 1 xmalloc (0x00007fc938c390de <bash+0x870de>) modid:2
+# 2 _init (0x00007fc938be0559 <bash+0x2e559>) modid:2
+# 3 execute_command_internal (0x00007fc938bf80d8 <bash+0x460d8>) modid:2
+# 4 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+# 5 reader_loop (0x00007fc938be4274 <bash+0x32274>) modid:2
+# 6 main (0x00007fc938be2c7f <bash+0x30c7f>) modid:2
+	error end
+
+Error #4: LEAK 25 direct bytes 0x00007fc938efcf70-0x00007fc938efcf89 + 0 indirect bytes
+# 0 replace_malloc    [/drmemory_package/common/alloc_replace.c:2577] (0x00000000738482c0 <libdrmemorylib.so+0x482c0>) modid:1
+# 1 xmalloc (0x00007fc938c390de <bash+0x870de>) modid:2
+# 2 tilde_expand (0x00007fc938c8035e <bash+0xce35e>) modid:2
+# 3 bash_tilde_expand (0x00007fc938bf1a74 <bash+0x3fa74>) modid:2
+# 4 maybe_execute_file (0x00007fc938c3efbf <bash+0x8cfbf>) modid:2
+# 5 main (0x00007fc938be2b37 <bash+0x30b37>) modid:2
+	error end
+
+Error #5: LEAK 48 direct bytes 0x00007fc938efe360-0x00007fc938efe390 + 0 indirect bytes
+# 0 replace_malloc    [/drmemory_package/common/alloc_replace.c:2577] (0x00000000738482c0 <libdrmemorylib.so+0x482c0>) modid:1
+# 1 xmalloc (0x00007fc938c390de <bash+0x870de>) modid:2
+# 2 bash!?    (0x00007fc938c3ec91 <bash+0x8cc91>) modid:2
+# 3 maybe_execute_file (0x00007fc938c3efd7 <bash+0x8cfd7>) modid:2
+# 4 main (0x00007fc938be2b37 <bash+0x30b37>) modid:2
+	error end
+
+Reached maximum leak report limit (-report_leak_max). No further leaks will be reported.
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     2x (leaked    4504 bytes): default (ld-linux stores index+1)
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      1 unique,     1 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      4 unique,     4 total,    358 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      0 ignored assumed-innocuous system leak(s)
+   2403 unique,  9994 total, 400787 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+  21973 leak(s) beyond -report_leak_max
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32492.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32492.000/potential_errors.txt
+Exiting @0:00:21.122 in thread 32492
+LOG END

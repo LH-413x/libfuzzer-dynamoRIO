@@ -1,0 +1,14 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+Dr. Memory errors that are likely to be false positives, for pid 1899: "pwd"
+If these are all false positives and your focus is unaddressable errors, consider running with -light to skip all uninitialized reads and leaks for higher performance.
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+NO POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-pwd.1899.000/potential_errors.txt

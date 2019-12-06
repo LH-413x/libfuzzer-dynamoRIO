@@ -1,0 +1,432 @@
+process=32462, parent=32461
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+start time: 3671862:31:03.639 == 06:31:03.639 11/20/2019
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+new thread #0 id=32462
+WARNING: symbol cache file has wrong version
+
+module load event: "libdrmemorylib.so" 0x0000000073800000-0x0000000073b4d000 modid: 1 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/release/libdrmemorylib.so
+
+module load event: "dash" 0x00007f23c8904000-0x00007f23c8b24000 modid: 2 /bin/dash
+WARNING: unable to load symbols for /bin/dash
+WARNING: symbol cache file has wrong version
+
+module load event: "ld-linux-x86-64.so.2" 0x00007f23cc8fa000-0x00007f23ccb24000 modid: 3 /lib/x86_64-linux-gnu/ld-2.27.so
+WARNING: symbol cache file has wrong version
+
+module load event: "libdynamorio.so" 0x00007f23ccb25000-0x00007f23ccef1000 modid: 4 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/lib64/release/libdynamorio.so
+WARNING: unable to open [vdso]
+WARNING: symbol cache file has wrong version
+
+module load event: "linux-vdso.so.1" 0x00007ffd6f3aa000-0x00007ffd6f3ac000 modid: 5 [vdso]
+WARNING: symbol cache file has wrong version
+
+module load event: "libc.so.6" 0x00007f23cb51e000-0x00007f23cb90f000 modid: 6 /lib/x86_64-linux-gnu/libc-2.27.so
+
+NEW THREAD: main thread 32462
+
+
+Error #1: UNINITIALIZED READ: reading 0x00007ffd6f3888f8-0x00007ffd6f3888fc 4 byte(s) within 0x00007ffd6f3888e0-0x00007ffd6f388938
+# 0 system call rt_sigaction
+# 1 dash!?    (0x00007f23c891634f <dash+0x1234f>) modid:2
+# 2 dash!?    (0x00007f23c891660f <dash+0x1260f>) modid:2
+# 3 dash!?    (0x00007f23c8912a7c <dash+0xea7c>) modid:2
+# 4 dash!?    (0x00007f23c8912fbb <dash+0xefbb>) modid:2
+# 5 dash!?    (0x00007f23c89088e4 <dash+0x48e4>) modid:2
+# 6 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 7 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:00.328 in thread 32462
+	error end
+
+Error #2: UNINITIALIZED READ: reading 0x00007ffd6f3888f8-0x00007ffd6f3888fc 4 byte(s) within 0x00007ffd6f3888e0-0x00007ffd6f388938
+# 0 system call rt_sigaction
+# 1 dash!?    (0x00007f23c891634f <dash+0x1234f>) modid:2
+# 2 dash!?    (0x00007f23c8916619 <dash+0x12619>) modid:2
+# 3 dash!?    (0x00007f23c8912a7c <dash+0xea7c>) modid:2
+# 4 dash!?    (0x00007f23c8912fbb <dash+0xefbb>) modid:2
+# 5 dash!?    (0x00007f23c89088e4 <dash+0x48e4>) modid:2
+# 6 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 7 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:00.329 in thread 32462
+	error end
+
+Error #3: UNINITIALIZED READ: reading 0x00007ffd6f388908-0x00007ffd6f38890c 4 byte(s) within 0x00007ffd6f3888f0-0x00007ffd6f388948
+# 0 system call rt_sigaction
+# 1 dash!?    (0x00007f23c891634f <dash+0x1234f>) modid:2
+# 2 dash!?    (0x00007f23c8912a7c <dash+0xea7c>) modid:2
+# 3 dash!?    (0x00007f23c8912fbb <dash+0xefbb>) modid:2
+# 4 dash!?    (0x00007f23c89088e4 <dash+0x48e4>) modid:2
+# 5 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 6 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:00.329 in thread 32462
+	error end
+
+Error #4: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 6 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 7 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 8 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #5: UNINITIALIZED READ: reading register rax
+# 0 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 1 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 2 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 3 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 4 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 5 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 6 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 7 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %rax %rax
+	error end
+
+Error #6: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #7: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #8: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 6 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 7 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 8 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #9: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #10: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #11: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #12: UNINITIALIZED READ: reading register rax
+# 0 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 1 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 2 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 3 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 6 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 7 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 8 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %rax %rax
+	error end
+
+Error #13: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #14: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.252 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #15: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #16: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #17: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #18: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #19: UNINITIALIZED READ: reading register rax
+# 0 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 1 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 2 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 3 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 6 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 7 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 8 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+# 9 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %rax %rax
+	error end
+
+Error #20: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 8 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 9 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+#10 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#11 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #21: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ebad <dash+0xabad>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 8 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 9 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+#10 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#11 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #22: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890eb8f <dash+0xab8f>) modid:2
+# 2 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 3 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 4 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 5 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 8 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+# 9 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#10 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+Error #23: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:165] (0x00007f23cb6a8234 <libc.so.6+0x18a234>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 8 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 9 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+#10 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#11 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %eax %eax
+	error end
+
+Error #24: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42 [../sysdeps/x86_64/multiarch/strcspn-c.c:167] (0x00007f23cb6a8238 <libc.so.6+0x18a238>) modid:6
+# 1 dash!?    (0x00007f23c890d9b3 <dash+0x99b3>) modid:2
+# 2 dash!?    (0x00007f23c890ec9f <dash+0xac9f>) modid:2
+# 3 dash!?    (0x00007f23c890b200 <dash+0x7200>) modid:2
+# 4 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 5 dash!?    (0x00007f23c890a52e <dash+0x652e>) modid:2
+# 6 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 7 dash!?    (0x00007f23c890a49e <dash+0x649e>) modid:2
+# 8 dash!?    (0x00007f23c891166e <dash+0xd66e>) modid:2
+# 9 dash!?    (0x00007f23c89089de <dash+0x49de>) modid:2
+#10 libc.so.6!__libc_start_main [../csu/libc-start.c:310] (0x00007f23cb53fb97 <libc.so.6+0x21b97>) modid:6
+#11 dash!?    (0x00007f23c8908a4a <dash+0x4a4a>) modid:2
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %edx %edx
+	error end
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      2
+	Error #   2:      2
+	Error #   3:      2
+	Error #   4:      3
+	Error #   8:      2
+	Error #   9:      2
+	Error #  10:      2
+	Error #  11:      3
+	Error #  15:      2
+	Error #  16:      2
+	Error #  17:      2
+	Error #  18:      3
+	Error #  22:      2
+	Error #  23:      2
+	Error #  24:      2
+
+SUPPRESSIONS USED:
+	     2x (leaked    4504 bytes): default (ld-linux stores index+1)
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+     24 unique,    42 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      0 ignored assumed-innocuous system leak(s)
+     28 unique,   109 total,  19446 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-dash.32462.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-dash.32462.000/potential_errors.txt
+Exiting @0:00:01.842 in thread 32462
+LOG END

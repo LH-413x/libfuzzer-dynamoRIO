@@ -1,0 +1,1 @@
+/home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/bin64/drrun -c /home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/libdrtrace.so  -- /home/alex/workstation/compare-fuzzers/test

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="blackBoxFuzzer_DynamoRIO"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libfuzzer\;CMake Files\dynamoRIO\;CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\;CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\;CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\;CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drtrace">
+				<Option output="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/libdrtrace.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/hongg_instrument"/>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/../include"/>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/../ext/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 drtrace"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="drtrace/fast">
+				<Option output="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/libdrtrace.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/hongg_instrument"/>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/../include"/>
+					<Add directory="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/../ext/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 drtrace/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/cmake-build-debug/dynamoRIO/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/drtracelib.cpp">
+			<Option target="drtrace"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/libfuzzer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libfuzzer\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\dynamoRIO\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/DynamoRIOConfig.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/DynamoRIOConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/DynamoRIOTarget64-debug.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/DynamoRIOTarget64-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/cmake/DynamoRIOTarget64.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\cmake\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DRMFTarget64-debug.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DRMFTarget64-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DRMFTarget64.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DrMemoryFrameworkConfig.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/dynamoRIO/DynamoRIO-Linux-7.1.0-1/drmemory/drmf/DrMemoryFrameworkConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\dynamoRIO\DynamoRIO-Linux-7.1.0-1\drmemory\drmf\"/>
+		</Unit>
+		<Unit filename="/home/alex/CLionProjects/black-box-fuzzers/libfuzzer-fuzz-subprocess/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

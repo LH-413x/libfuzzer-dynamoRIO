@@ -1,0 +1,192 @@
+# Suppression for Error #1
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+
+## Mod+offs-style suppression for Error #1:
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+<libc.so.6+0x18a26b>
+<dash+0xab8f>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7305>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0xd66e>
+
+# Suppression for Error #2
+UNINITIALIZED READ
+name=Error #2 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+
+## Mod+offs-style suppression for Error #2:
+UNINITIALIZED READ
+name=Error #2 (update to meaningful name)
+<libc.so.6+0x18a248>
+<dash+0xab8f>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7305>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0xd66e>
+
+# Suppression for Error #3
+UNINITIALIZED READ
+name=Error #3 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+
+## Mod+offs-style suppression for Error #3:
+UNINITIALIZED READ
+name=Error #3 (update to meaningful name)
+<libc.so.6+0x18a26b>
+<dash+0x99b3>
+<dash+0xac9f>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7305>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0x649e>
+
+# Suppression for Error #4
+UNINITIALIZED READ
+name=Error #4 (update to meaningful name)
+libc.so.6!__strpbrk_sse42
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+dash!*
+
+## Mod+offs-style suppression for Error #4:
+UNINITIALIZED READ
+name=Error #4 (update to meaningful name)
+<libc.so.6+0x18a248>
+<dash+0x99b3>
+<dash+0xac9f>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7200>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x78f3>
+<dash+0xa7fc>
+<dash+0xaae1>
+<dash+0x7305>
+<dash+0x649e>
+<dash+0x6592>
+<dash+0x649e>
+<dash+0x649e>
+<dash+0x649e>
+

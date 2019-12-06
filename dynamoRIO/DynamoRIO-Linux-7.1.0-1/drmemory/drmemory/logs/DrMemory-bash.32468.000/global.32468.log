@@ -1,0 +1,71 @@
+process=32468, parent=32460
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+new thread #1 id=32468
+new logfile after fork
+start time: 3671862:31:06.568 == 06:31:06.568 11/20/2019
+
+Error #1: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f19203-0x00007fc938f19210 13 byte(s) within 0x00007fc938f19200-0x00007fc938f19210
+# 0 libc.so.6!__strpbrk_sse42 [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138] (0x00007fc93b6221f4 <libc.so.6+0x18a1f4>) modid:6
+# 1 _init (0x00007fc938bdfa01 <bash+0x2da01>) modid:2
+# 2 execute_command_internal (0x00007fc938bf80d8 <bash+0x460d8>) modid:2
+# 3 parse_and_execute (0x00007fc938c3f8e8 <bash+0x8d8e8>) modid:2
+# 4 command_substitute (0x00007fc938c13c4a <bash+0x61c4a>) modid:2
+# 5 bash!?    (0x00007fc938c185c3 <bash+0x665c3>) modid:2
+# 6 bash!?    (0x00007fc938c19886 <bash+0x67886>) modid:2
+# 7 bash!?    (0x00007fc938c1a95e <bash+0x6895e>) modid:2
+# 8 bash!?    (0x00007fc938c1ccfb <bash+0x6acfb>) modid:2
+# 9 _init (0x00007fc938bdfa9b <bash+0x2da9b>) modid:2
+#10 execute_command_internal (0x00007fc938bf80d8 <bash+0x460d8>) modid:2
+#11 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+#12 execute_command_internal (0x00007fc938bf9a2b <bash+0x47a2b>) modid:2
+#13 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+#14 execute_command_internal (0x00007fc938bf7fd7 <bash+0x45fd7>) modid:2
+#15 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+#16 execute_command_internal (0x00007fc938bf7fd7 <bash+0x45fd7>) modid:2
+#17 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+#18 execute_command_internal (0x00007fc938bf7fd7 <bash+0x45fd7>) modid:2
+#19 execute_command (0x00007fc938bf9bf2 <bash+0x47bf2>) modid:2
+Note: @0:00:00.017 in thread 32468
+Note: next higher malloc: 0x00007fc938f19230-0x00007fc938f19250
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f19200-0x00007fc938f19203
+Note: instruction: movdqa (%rsi) -> %xmm1
+	error end
+
+Error #2: LEAK 281 direct bytes 0x00007fc938ed3670-0x00007fc938ed3789 + 0 indirect bytes
+# 0 replace_malloc    [/drmemory_package/common/alloc_replace.c:2577] (0x00000000738482c0 <libdrmemorylib.so+0x482c0>) modid:1
+# 1 xmalloc (0x00007fc938c390de <bash+0x870de>) modid:2
+# 2 set_default_locale (0x00007fc938c32b3b <bash+0x80b3b>) modid:2
+# 3 main (0x00007fc938be1e67 <bash+0x2fe67>) modid:2
+	error end
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     2x (leaked    4504 bytes): default (ld-linux stores index+1)
+
+ERRORS FOUND:
+      1 unique,     1 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,    281 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      0 ignored assumed-innocuous system leak(s)
+    528 unique,  1299 total,  86392 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32468.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32468.000/potential_errors.txt
+Exiting @0:00:00.843 in thread 32468
+LOG END

@@ -1,0 +1,705 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+Dr. Memory results for pid 32460: "bash"
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+
+WARNING: application is missing line number information.
+
+Error #1: UNINITIALIZED READ: reading register al
+# 0 replace_strlen               [/drmemory_package/drmemory/replace.c:412]
+# 1 libc.so.6!__gethostname      [../sysdeps/posix/gethostname.c:35]
+# 2 _init                       +0x10af   (0x00007fc938bdeec8 <bash+0x2cec8>)
+# 3 main                        +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.583 in thread 32460
+Note: instruction: test   %al %al
+
+Error #2: UNINITIALIZED READ: reading register al
+# 0 replace_strcpy               [/drmemory_package/drmemory/replace.c:596]
+# 1 _init                       +0x10e4   (0x00007fc938bdeefd <bash+0x2cefd>)
+# 2 main                        +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.584 in thread 32460
+Note: instruction: test   %al %al
+
+Error #3: UNINITIALIZED READ: reading 0x00007fc938ed3d60-0x00007fc938ed3d61 1 byte(s)
+# 0 make_variable_value                     +0x97     (0x00007fc938bfd847 <bash+0x4b847>)
+# 1 bash!?                                  +0x0      (0x00007fc938bfea56 <bash+0x4ca56>)
+# 2 initialize_shell_variables              +0x215    (0x00007fc938c00f76 <bash+0x4ef76>)
+# 3 _init                                   +0x1155   (0x00007fc938bdef6e <bash+0x2cf6e>)
+# 4 main                                    +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.819 in thread 32460
+Note: instruction: cmp    (%rsi) $0x00
+
+Error #4: UNINITIALIZED READ: reading register al
+# 0 replace_strlen                           [/drmemory_package/drmemory/replace.c:412]
+# 1 make_variable_value                     +0x2af    (0x00007fc938bfda60 <bash+0x4ba60>)
+# 2 bash!?                                  +0x0      (0x00007fc938bfea56 <bash+0x4ca56>)
+# 3 initialize_shell_variables              +0x215    (0x00007fc938c00f76 <bash+0x4ef76>)
+# 4 _init                                   +0x1155   (0x00007fc938bdef6e <bash+0x2cf6e>)
+# 5 main                                    +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.819 in thread 32460
+Note: instruction: test   %al %al
+
+Error #5: UNINITIALIZED READ: reading register al
+# 0 replace_strcpy                           [/drmemory_package/drmemory/replace.c:596]
+# 1 make_variable_value                     +0x2c3    (0x00007fc938bfda74 <bash+0x4ba74>)
+# 2 bash!?                                  +0x0      (0x00007fc938bfea56 <bash+0x4ca56>)
+# 3 initialize_shell_variables              +0x215    (0x00007fc938c00f76 <bash+0x4ef76>)
+# 4 _init                                   +0x1155   (0x00007fc938bdef6e <bash+0x2cf6e>)
+# 5 main                                    +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.820 in thread 32460
+Note: instruction: test   %al %al
+
+Error #6: UNINITIALIZED READ: reading register rax
+# 0 initialize_job_control              +0x34c    (0x00007fc938c0b98c <bash+0x5998c>)
+# 1 _init                               +0x1160   (0x00007fc938bdef79 <bash+0x2cf79>)
+# 2 main                                +0x930    (0x00007fc938be26e1 <bash+0x306e1>)
+Note: @0:00:00.880 in thread 32460
+Note: instruction: test   %rax %rax
+
+Error #7: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938eec073-0x00007fc938eec080 13 byte(s) within 0x00007fc938eec070-0x00007fc938eec080
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 8 main                                  +0xd75    (0x00007fc938be2b26 <bash+0x30b26>)
+Note: @0:00:01.207 in thread 32460
+Note: next higher malloc: 0x00007fc938eec0a0-0x00007fc938eec0c0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938eec070-0x00007fc938eec073
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #8: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938eed6e3-0x00007fc938eed6f0 13 byte(s) within 0x00007fc938eed6e0-0x00007fc938eed6f0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 4 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 5 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 6 main                                  +0xd75    (0x00007fc938be2b26 <bash+0x30b26>)
+Note: @0:00:01.301 in thread 32460
+Note: next higher malloc: 0x00007fc938eed710-0x00007fc938eed730
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938eed6e0-0x00007fc938eed6e3
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #9: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938eee6b3-0x00007fc938eee6c0 13 byte(s) within 0x00007fc938eee6b0-0x00007fc938eee6c0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 7 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 8 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 9 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#10 main                                  +0xd75    (0x00007fc938be2b26 <bash+0x30b26>)
+Note: @0:00:01.396 in thread 32460
+Note: next higher malloc: 0x00007fc938eee6e0-0x00007fc938eee700
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938eee6b0-0x00007fc938eee6b3
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #10: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938eeea43-0x00007fc938eeea50 13 byte(s) within 0x00007fc938eeea40-0x00007fc938eeea50
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 7 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 8 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 9 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#10 main                                  +0xd75    (0x00007fc938be2b26 <bash+0x30b26>)
+Note: @0:00:01.428 in thread 32460
+Note: next higher malloc: 0x00007fc938eeea70-0x00007fc938eeea90
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938eeea40-0x00007fc938eeea43
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #11: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938ef0fd3-0x00007fc938ef0fe0 13 byte(s) within 0x00007fc938ef0fd0-0x00007fc938ef0fe0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 8 main                                  +0xd75    (0x00007fc938be2b26 <bash+0x30b26>)
+Note: @0:00:01.530 in thread 32460
+Note: next higher malloc: 0x00007fc938ef1000-0x00007fc938ef1020
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938ef0fd0-0x00007fc938ef0fd3
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #12: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938effa63-0x00007fc938effa70 13 byte(s) within 0x00007fc938effa60-0x00007fc938effa70
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 4 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 5 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 6 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:02.246 in thread 32460
+Note: next higher malloc: 0x00007fc938effa90-0x00007fc938effab0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938effa60-0x00007fc938effa63
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #13: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f09343-0x00007fc938f09350 13 byte(s) within 0x00007fc938f09340-0x00007fc938f09350
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 8 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:02.445 in thread 32460
+Note: next higher malloc: 0x00007fc938f09370-0x00007fc938f09390
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f09340-0x00007fc938f09343
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #14: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f12a03-0x00007fc938f12a10 13 byte(s) within 0x00007fc938f12a00-0x00007fc938f12a10
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 7 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 8 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 9 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#10 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:04.885 in thread 32460
+Note: next higher malloc: 0x00007fc938f12a30-0x00007fc938f12a50
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f12a00-0x00007fc938f12a03
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #15: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f12d93-0x00007fc938f12da0 13 byte(s) within 0x00007fc938f12d90-0x00007fc938f12da0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 7 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 8 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 9 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#10 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:04.899 in thread 32460
+Note: next higher malloc: 0x00007fc938f12dc0-0x00007fc938f12de0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f12d90-0x00007fc938f12d93
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #16: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938eebd03-0x00007fc938eebd10 13 byte(s) within 0x00007fc938eebd00-0x00007fc938eebd10
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 8 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:05.151 in thread 32460
+Note: next higher malloc: 0x00007fc938eebdd0-0x00007fc938eebfc0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938eebd00-0x00007fc938eebd03
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #17: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938ef18e3-0x00007fc938ef18f0 13 byte(s) within 0x00007fc938ef18e0-0x00007fc938ef18f0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 7 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 8 execute_command_internal              +0xa76    (0x00007fc938bf7fd7 <bash+0x45fd7>)
+# 9 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#10 execute_command_internal              +0xa76    (0x00007fc938bf7fd7 <bash+0x45fd7>)
+#11 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#12 execute_command_internal              +0xa76    (0x00007fc938bf7fd7 <bash+0x45fd7>)
+#13 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#14 execute_command_internal              +0xa76    (0x00007fc938bf7fd7 <bash+0x45fd7>)
+#15 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#16 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#17 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#18 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#19 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+Note: @0:00:05.497 in thread 32460
+Note: next higher malloc: 0x00007fc938ef1910-0x00007fc938ef1930
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938ef18e0-0x00007fc938ef18e3
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #18: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f0aa03-0x00007fc938f0aa10 13 byte(s) within 0x00007fc938f0aa00-0x00007fc938f0aa10
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+# 7 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 8 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 9 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#10 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:07.301 in thread 32460
+Note: next higher malloc: 0x00007fc938f0aa30-0x00007fc938f0aa50
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f0aa00-0x00007fc938f0aa03
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #19: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f15293-0x00007fc938f152a0 13 byte(s) within 0x00007fc938f15290-0x00007fc938f152a0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 4 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 5 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 6 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 7 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+# 8 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+# 9 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#10 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#11 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#14 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#15 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#16 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#17 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:07.858 in thread 32460
+Note: next higher malloc: 0x00007fc938f15940-0x00007fc938f15950
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f15290-0x00007fc938f15293
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #20: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938faf633-0x00007fc938faf640 13 byte(s) within 0x00007fc938faf630-0x00007fc938faf640
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 8 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 9 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#10 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#11 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#16 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#17 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#18 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#19 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:21.041 in thread 32460
+Note: next higher malloc: 0x00007fc938faf660-0x00007fc938faf680
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938faf630-0x00007fc938faf633
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #21: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f09253-0x00007fc938f09260 13 byte(s) within 0x00007fc938f09250-0x00007fc938f09260
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 execute_command_internal              +0x17b0   (0x00007fc938bf8d11 <bash+0x46d11>)
+# 7 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 8 execute_command_internal              +0x17b0   (0x00007fc938bf8d11 <bash+0x46d11>)
+# 9 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#10 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#11 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+#12 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+#13 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#14 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#15 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#16 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#17 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#18 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#19 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+Note: @0:00:22.508 in thread 32460
+Note: next higher malloc: 0x00007fc938f095e0-0x00007fc938f09610
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f09250-0x00007fc938f09253
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #22: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f00de3-0x00007fc938f00df0 13 byte(s) within 0x00007fc938f00de0-0x00007fc938f00df0
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 8 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 9 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#10 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#11 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#16 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#17 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#18 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#19 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:25.820 in thread 32460
+Note: next higher malloc: 0x00007fc938f00e10-0x00007fc938f00e28
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f00de0-0x00007fc938f00de3
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #23: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938f2eb53-0x00007fc938f2eb60 13 byte(s) within 0x00007fc938f2eb50-0x00007fc938f2eb60
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x10c1   (0x00007fc938bf8622 <bash+0x46622>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 8 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 9 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#10 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#11 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#16 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#17 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#18 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#19 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:29.707 in thread 32460
+Note: next higher malloc: 0x00007fc938f2ebb0-0x00007fc938f2ebc0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938f2eb50-0x00007fc938f2eb53
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #24: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc938ef5033-0x00007fc938ef5040 13 byte(s) within 0x00007fc938ef5030-0x00007fc938ef5040
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 8 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 9 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#10 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#11 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#16 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#17 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#18 maybe_execute_file                    +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+#19 main                                  +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+Note: @0:00:29.715 in thread 32460
+Note: next higher malloc: 0x00007fc938ef5070-0x00007fc938ef5080
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc938ef5030-0x00007fc938ef5033
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #25: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc939017013-0x00007fc939017020 13 byte(s) within 0x00007fc939017010-0x00007fc939017020
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 4 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 5 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 6 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 7 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+# 8 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+# 9 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#10 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#11 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x17b0   (0x00007fc938bf8d11 <bash+0x46d11>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#16 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#17 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#18 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+#19 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+Note: @0:00:40.770 in thread 32460
+Note: next higher malloc: 0x00007fc939017040-0x00007fc939017064
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc939017010-0x00007fc939017013
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #26: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc93900ec43-0x00007fc93900ec50 13 byte(s) within 0x00007fc93900ec40-0x00007fc93900ec50
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 4 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 5 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 6 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 7 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+# 8 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+# 9 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#10 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#11 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#12 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#13 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#14 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+#15 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+#16 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#17 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#18 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#19 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+Note: @0:00:43.511 in thread 32460
+Note: next higher malloc: 0x00007fc93900ec70-0x00007fc93900ec79
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc93900ec40-0x00007fc93900ec43
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #27: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc9385a9043-0x00007fc9385a9050 13 byte(s) within 0x00007fc9385a9040-0x00007fc9385a9050
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0xa76    (0x00007fc938bf7fd7 <bash+0x45fd7>)
+# 5 execute_command_internal              +0x9e7    (0x00007fc938bf7f48 <bash+0x45f48>)
+# 6 bash!?                                +0x0      (0x00007fc938bfaa79 <bash+0x48a79>)
+# 7 _init                                 +0x23ef   (0x00007fc938be0208 <bash+0x2e208>)
+# 8 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 9 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#10 execute_command_internal              +0x1bdc   (0x00007fc938bf913d <bash+0x4713d>)
+#11 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#12 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+#13 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+#14 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+#15 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#16 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#17 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#18 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#19 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+Note: @0:00:49.287 in thread 32460
+Note: next higher malloc: 0x00007fc9385a9070-0x00007fc9385a9080
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc9385a9040-0x00007fc9385a9043
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #28: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x00007fc93902a953-0x00007fc93902a960 13 byte(s) within 0x00007fc93902a950-0x00007fc93902a960
+# 0 libc.so.6!__strpbrk_sse42              [/usr/lib/gcc/x86_64-linux-gnu/7/include/tmmintrin.h:138]
+# 1 _init                                 +0x1be8   (0x00007fc938bdfa01 <bash+0x2da01>)
+# 2 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 3 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 4 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+# 5 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+# 6 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+# 7 source_file                           +0x36     (0x00007fc938c3f077 <bash+0x8d077>)
+# 8 source_builtin                        +0x108    (0x00007fc938c49449 <bash+0x97449>)
+# 9 _init                                 +0x16a6   (0x00007fc938bdf4bf <bash+0x2d4bf>)
+#10 _init                                 +0x23d0   (0x00007fc938be01e9 <bash+0x2e1e9>)
+#11 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+#12 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#13 execute_command_internal              +0x24ca   (0x00007fc938bf9a2b <bash+0x47a2b>)
+#14 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#15 execute_command_internal              +0x17b0   (0x00007fc938bf8d11 <bash+0x46d11>)
+#16 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+#17 execute_command_internal              +0x110a   (0x00007fc938bf866b <bash+0x4666b>)
+#18 parse_and_execute                     +0x4d7    (0x00007fc938c3f8e8 <bash+0x8d8e8>)
+#19 bash!?                                +0x0      (0x00007fc938c3eebe <bash+0x8cebe>)
+Note: @0:00:49.497 in thread 32460
+Note: next higher malloc: 0x00007fc93902a980-0x00007fc93902a9a0
+Note: refers to 0 byte(s) beyond last valid byte in prior malloc
+Note: prev lower malloc:  0x00007fc93902a950-0x00007fc93902a953
+Note: instruction: movdqa (%rsi) -> %xmm1
+
+Error #29: UNINITIALIZED READ: reading register al
+# 0 replace_strlen                     [/drmemory_package/drmemory/replace.c:412]
+# 1 decode_prompt_string              +0x57e    (0x00007fc938be609f <bash+0x3409f>)
+Note: @0:00:52.242 in thread 32460
+Note: instruction: test   %al %al
+
+Error #30: UNINITIALIZED READ: reading register al
+# 0 replace_strcpy                     [/drmemory_package/drmemory/replace.c:596]
+# 1 decode_prompt_string              +0x592    (0x00007fc938be60b3 <bash+0x340b3>)
+Note: @0:00:52.242 in thread 32460
+Note: instruction: test   %al %al
+
+Error #31: UNINITIALIZED READ: reading register al
+# 0 replace_strchr                     [/drmemory_package/drmemory/replace.c:334]
+# 1 decode_prompt_string              +0x944    (0x00007fc938be6465 <bash+0x34465>)
+Note: @0:00:52.243 in thread 32460
+Note: instruction: cmp    %r12l %al
+
+Error #32: UNINITIALIZED READ: reading register al
+# 0 replace_strchr                     [/drmemory_package/drmemory/replace.c:336]
+# 1 decode_prompt_string              +0x944    (0x00007fc938be6465 <bash+0x34465>)
+Note: @0:00:52.243 in thread 32460
+Note: instruction: test   %al %al
+
+Error #33: UNINITIALIZED READ: reading register al
+# 0 replace_strlen                                     [/drmemory_package/drmemory/replace.c:412]
+# 1 sh_backslash_quote_for_double_quotes              +0x8      (0x00007fc938c5b099 <bash+0xa9099>)
+# 2 decode_prompt_string                              +0x5c3    (0x00007fc938be60e4 <bash+0x340e4>)
+Note: @0:00:52.244 in thread 32460
+Note: instruction: test   %al %al
+
+Error #34: UNINITIALIZED READ: reading register dl
+# 0 sh_backslash_quote_for_double_quotes              +0x32     (0x00007fc938c5b0c2 <bash+0xa90c2>)
+# 1 decode_prompt_string                              +0x5c3    (0x00007fc938be60e4 <bash+0x340e4>)
+Note: @0:00:52.244 in thread 32460
+Note: instruction: test   %dl %dl
+
+Error #35: UNINITIALIZED READ: reading 0x00007fffd1ab7224-0x00007fffd1ab7230 12 byte(s) within 0x00007fffd1ab7200-0x00007fffd1ab723c
+# 0 system call ioctl.0x5403 parameter #2
+# 1 bash!?                                             +0x0      (0x00007fc938c6409f <bash+0xb209f>)
+# 2 rl_prep_terminal                                   +0x2a5    (0x00007fc938c645f6 <bash+0xb25f6>)
+# 3 readline                                           +0x27     (0x00007fc938c5f928 <bash+0xad928>)
+# 4 bash!?                                             +0x0      (0x00007fc938be4759 <bash+0x32759>)
+# 5 bash!?                                             +0x0      (0x00007fc938be6b3d <bash+0x34b3d>)
+# 6 bash!?                                             +0x0      (0x00007fc938be9b8a <bash+0x37b8a>)
+# 7 yyparse                                            +0x427    (0x00007fc938bed308 <bash+0x3b308>)
+Note: @0:00:56.204 in thread 32460
+
+Error #36: UNINITIALIZED READ: reading 0x00007fffd1ab7170-0x00007fffd1ab7178 8 byte(s) within 0x00007fffd1ab7160-0x00007fffd1ab71a0
+# 0 system call pselect6 pselect sigmask
+# 1 rl_getc                                           +0xb1     (0x00007fc938c76042 <bash+0xc4042>)
+# 2 rl_read_key                                       +0xc3     (0x00007fc938c768d4 <bash+0xc48d4>)
+# 3 readline_internal_char                            +0x76     (0x00007fc938c5f187 <bash+0xad187>)
+# 4 readline                                          +0x44     (0x00007fc938c5f945 <bash+0xad945>)
+# 5 bash!?                                            +0x0      (0x00007fc938be4759 <bash+0x32759>)
+# 6 bash!?                                            +0x0      (0x00007fc938be6b3d <bash+0x34b3d>)
+# 7 bash!?                                            +0x0      (0x00007fc938be9b8a <bash+0x37b8a>)
+# 8 yyparse                                           +0x427    (0x00007fc938bed308 <bash+0x3b308>)
+Note: @0:00:56.256 in thread 32460
+
+Error #37: UNINITIALIZED READ: reading 0x00007fffd1ab7110-0x00007fffd1ab7118 8 byte(s) within 0x00007fffd1ab7100-0x00007fffd1ab7140
+# 0 system call pselect6 pselect sigmask
+# 1 rl_getc                                           +0xb1     (0x00007fc938c76042 <bash+0xc4042>)
+# 2 rl_read_key                                       +0xc3     (0x00007fc938c768d4 <bash+0xc48d4>)
+# 3 rl_insert                                         +0x57     (0x00007fc938c79b98 <bash+0xc7b98>)
+# 4 _rl_dispatch_subseq                               +0x210    (0x00007fc938c5ece1 <bash+0xacce1>)
+# 5 readline_internal_char                            +0xc2     (0x00007fc938c5f1d3 <bash+0xad1d3>)
+# 6 readline                                          +0x44     (0x00007fc938c5f945 <bash+0xad945>)
+# 7 bash!?                                            +0x0      (0x00007fc938be4759 <bash+0x32759>)
+# 8 bash!?                                            +0x0      (0x00007fc938be6b3d <bash+0x34b3d>)
+# 9 bash!?                                            +0x0      (0x00007fc938be9b8a <bash+0x37b8a>)
+#10 yyparse                                           +0x427    (0x00007fc938bed308 <bash+0x3b308>)
+Note: @0:00:56.264 in thread 32460
+
+Error #38: UNINITIALIZED READ: reading 0x00007fffd1ab7294-0x00007fffd1ab72a0 12 byte(s) within 0x00007fffd1ab7270-0x00007fffd1ab72ac
+# 0 system call ioctl.0x5403 parameter #2
+# 1 bash!?                                             +0x0      (0x00007fc938c6409f <bash+0xb209f>)
+# 2 rl_deprep_terminal                                 +0x59     (0x00007fc938c6424a <bash+0xb224a>)
+# 3 readline                                           +0x66     (0x00007fc938c5f967 <bash+0xad967>)
+# 4 bash!?                                             +0x0      (0x00007fc938be4759 <bash+0x32759>)
+# 5 bash!?                                             +0x0      (0x00007fc938be6b3d <bash+0x34b3d>)
+# 6 bash!?                                             +0x0      (0x00007fc938be9b8a <bash+0x37b8a>)
+# 7 yyparse                                            +0x427    (0x00007fc938bed308 <bash+0x3b308>)
+Note: @0:00:58.311 in thread 32460
+
+Error #39: UNINITIALIZED READ: reading 0x00007fffd1ab8074-0x00007fffd1ab8080 12 byte(s) within 0x00007fffd1ab8050-0x00007fffd1ab808c
+# 0 system call ioctl.0x5403 parameter #2
+# 1 set_tty_state                                      +0x21     (0x00007fc938c08682 <bash+0x56682>)
+# 2 wait_for                                           +0x30d    (0x00007fc938c0a1ce <bash+0x581ce>)
+# 3 execute_command_internal                           +0x2603   (0x00007fc938bf9b64 <bash+0x47b64>)
+# 4 execute_command                                    +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 5 reader_loop                                        +0x1b3    (0x00007fc938be4274 <bash+0x32274>)
+# 6 main                                               +0xece    (0x00007fc938be2c7f <bash+0x30c7f>)
+Note: @0:00:58.385 in thread 32460
+
+Error #40: UNINITIALIZED READ: reading 0x00007fffd1ab7c78-0x00007fffd1ab7c80 8 byte(s)
+# 0 bash!?                       +0x0      (0x00007fc938c097c0 <bash+0x577c0>)
+# 1 end_job_control              +0x30     (0x00007fc938c0c891 <bash+0x5a891>)
+# 2 exit_shell                   +0x92     (0x00007fc938be3bf3 <bash+0x31bf3>)
+# 3 main                         +0xed9    (0x00007fc938be2c8a <bash+0x30c8a>)
+Note: @0:01:08.264 in thread 32460
+Note: instruction: ret    %rsp (%rsp) -> %rsp
+
+Error #41: LEAK 281 direct bytes 0x00007fc938ed3670-0x00007fc938ed3789 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 set_default_locale              +0x2a     (0x00007fc938c32b3b <bash+0x80b3b>)
+# 3 main                            +0xb6     (0x00007fc938be1e67 <bash+0x2fe67>)
+
+Error #42: LEAK 25 direct bytes 0x00007fc938efcf70-0x00007fc938efcf89 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 tilde_expand                    +0x3d     (0x00007fc938c8035e <bash+0xce35e>)
+# 3 bash_tilde_expand               +0xe3     (0x00007fc938bf1a74 <bash+0x3fa74>)
+# 4 maybe_execute_file              +0xe      (0x00007fc938c3efbf <bash+0x8cfbf>)
+# 5 main                            +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+
+Error #43: LEAK 48 direct bytes 0x00007fc938efe360-0x00007fc938efe390 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 bash!?                          +0x0      (0x00007fc938c3ec91 <bash+0x8cc91>)
+# 3 maybe_execute_file              +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 4 main                            +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+
+Reached maximum leak report limit (-report_leak_max). No further leaks will be reported.
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:     30
+	Error #   2:     30
+	Error #   4:     28
+	Error #   5:     28
+	Error #   9:      2
+	Error #  11:      5
+	Error #  12:      2
+	Error #  16:      3
+	Error #  19:     20
+	Error #  20:      4
+	Error #  21:     46
+	Error #  24:      2
+	Error #  25:     14
+	Error #  26:      2
+	Error #  27:      7
+	Error #  28:     10
+	Error #  29:    224
+	Error #  30:    224
+	Error #  31:    224
+	Error #  32:    224
+	Error #  33:    224
+	Error #  34:    224
+	Error #  35:      3
+	Error #  36:     36
+	Error #  37:     16
+	Error #  38:      3
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+     22 unique,   127 total unaddressable access(es)
+     18 unique,  1522 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      3 unique,     3 total,    354 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+   2411 unique,  9995 total, 401013 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+  21981 leak(s) beyond -report_leak_max
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32460.000/results.txt

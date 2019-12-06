@@ -1,0 +1,65 @@
+process=26690, parent=32681
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+start time: 3671863:03:58.612 == 07:03:58.612 11/20/2019
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+new thread #0 id=26690
+WARNING: symbol cache file has wrong version
+
+module load event: "libdynamorio.so" 0x0000000071000000-0x00000000713cc000 modid: 1 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/lib64/release/libdynamorio.so
+
+module load event: "libdrmemorylib.so" 0x0000000073800000-0x0000000073b4d000 modid: 2 /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/release/libdrmemorylib.so
+
+module load event: "ps" 0x00007fa602dc9000-0x00007fa60300b000 modid: 3 /bin/ps
+WARNING: unable to load symbols for /bin/ps
+
+module load event: "ld-linux-x86-64.so.2" 0x00007fa606de1000-0x00007fa60700b000 modid: 4 /lib/x86_64-linux-gnu/ld-2.27.so
+WARNING: unable to open [vdso]
+
+module load event: "linux-vdso.so.1" 0x00007fa60700f000-0x00007fa607011000 modid: 5 [vdso]
+
+module load event: "libc.so.6" 0x00007fa605612000-0x00007fa605a03000 modid: 6 /lib/x86_64-linux-gnu/libc-2.27.so
+
+module load event: "librt.so.1" 0x00007fa605186000-0x00007fa60538e000 modid: 7 /lib/x86_64-linux-gnu/librt-2.27.so
+
+module load event: "libpthread.so.0" 0x00007fa60480a000-0x00007fa604a29000 modid: 8 /lib/x86_64-linux-gnu/libpthread-2.27.so
+
+module load event: "libgpg-error.so.0" 0x00007fa6045f5000-0x00007fa60480a000 modid: 9 /lib/x86_64-linux-gnu/libgpg-error.so.0.22.0
+WARNING: unable to load symbols for /lib/x86_64-linux-gnu/libgpg-error.so.0.22.0
+
+module load event: "libgcrypt.so.20" 0x00007fa604a29000-0x00007fa604d44000 modid: 10 /lib/x86_64-linux-gnu/libgcrypt.so.20.2.1
+WARNING: unable to load symbols for /lib/x86_64-linux-gnu/libgcrypt.so.20.2.1
+
+module load event: "liblz4.so.1" 0x00007fa604d44000-0x00007fa604f60000 modid: 11 /usr/lib/x86_64-linux-gnu/liblz4.so.1.7.1
+WARNING: unable to load symbols for /usr/lib/x86_64-linux-gnu/liblz4.so.1.7.1
+
+module load event: "libdl.so.2" 0x00007fa605a03000-0x00007fa605c07000 modid: 12 /lib/x86_64-linux-gnu/libdl-2.27.so
+
+module load event: "liblzma.so.5" 0x00007fa604f60000-0x00007fa605186000 modid: 13 /lib/x86_64-linux-gnu/liblzma.so.5.2.2
+WARNING: unable to load symbols for /lib/x86_64-linux-gnu/liblzma.so.5.2.2
+
+module load event: "libsystemd.so.0" 0x00007fa60538e000-0x00007fa605612000 modid: 14 /lib/x86_64-linux-gnu/libsystemd.so.0.21.0
+WARNING: unable to load symbols for /lib/x86_64-linux-gnu/libsystemd.so.0.21.0
+
+module load event: "libprocps.so.6" 0x00007fa605c07000-0x00007fa605e2b000 modid: 15 /lib/x86_64-linux-gnu/libprocps.so.6.0.0
+WARNING: unable to load symbols for /lib/x86_64-linux-gnu/libprocps.so.6.0.0
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+ERRORS IGNORED:
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-ps.26690.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+NO POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-ps.26690.000/potential_errors.txt
+Exiting @0:00:00.146 in thread 26690
+LOG END

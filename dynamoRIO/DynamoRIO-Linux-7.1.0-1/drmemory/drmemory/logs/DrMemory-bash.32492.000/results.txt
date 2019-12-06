@@ -1,0 +1,65 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+
+Error #1: UNINITIALIZED READ: reading 0x00007fffd1ab7828-0x00007fffd1ab7830 8 byte(s)
+# 0 termsig_sighandler                    +0x32     (0x00007fc938c22d62 <bash+0x70d62>)
+# 1 give_terminal_to                      +0xba     (0x00007fc938c0997b <bash+0x5797b>)
+# 2 make_child                            +0x1f6    (0x00007fc938c09bc7 <bash+0x57bc7>)
+# 3 _init                                 +0x2759   (0x00007fc938be0572 <bash+0x2e572>)
+# 4 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 5 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 6 reader_loop                           +0x1b3    (0x00007fc938be4274 <bash+0x32274>)
+# 7 main                                  +0xece    (0x00007fc938be2c7f <bash+0x30c7f>)
+Note: @0:00:15.496 in thread 32492
+Note: instruction: ret    %rsp (%rsp) -> %rsp
+
+Error #2: LEAK 281 direct bytes 0x00007fc938ed3670-0x00007fc938ed3789 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 set_default_locale              +0x2a     (0x00007fc938c32b3b <bash+0x80b3b>)
+# 3 main                            +0xb6     (0x00007fc938be1e67 <bash+0x2fe67>)
+
+Error #3: LEAK 4 direct bytes 0x00007fc938ed7e10-0x00007fc938ed7e14 + 0 indirect bytes
+# 0 replace_malloc                         [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                               +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 _init                                 +0x2740   (0x00007fc938be0559 <bash+0x2e559>)
+# 3 execute_command_internal              +0xb77    (0x00007fc938bf80d8 <bash+0x460d8>)
+# 4 execute_command                       +0x51     (0x00007fc938bf9bf2 <bash+0x47bf2>)
+# 5 reader_loop                           +0x1b3    (0x00007fc938be4274 <bash+0x32274>)
+# 6 main                                  +0xece    (0x00007fc938be2c7f <bash+0x30c7f>)
+
+Error #4: LEAK 25 direct bytes 0x00007fc938efcf70-0x00007fc938efcf89 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 tilde_expand                    +0x3d     (0x00007fc938c8035e <bash+0xce35e>)
+# 3 bash_tilde_expand               +0xe3     (0x00007fc938bf1a74 <bash+0x3fa74>)
+# 4 maybe_execute_file              +0xe      (0x00007fc938c3efbf <bash+0x8cfbf>)
+# 5 main                            +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+
+Error #5: LEAK 48 direct bytes 0x00007fc938efe360-0x00007fc938efe390 + 0 indirect bytes
+# 0 replace_malloc                   [/drmemory_package/common/alloc_replace.c:2577]
+# 1 xmalloc                         +0xd      (0x00007fc938c390de <bash+0x870de>)
+# 2 bash!?                          +0x0      (0x00007fc938c3ec91 <bash+0x8cc91>)
+# 3 maybe_execute_file              +0x26     (0x00007fc938c3efd7 <bash+0x8cfd7>)
+# 4 main                            +0xd86    (0x00007fc938be2b37 <bash+0x30b37>)
+
+Reached maximum leak report limit (-report_leak_max). No further leaks will be reported.
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      1 unique,     1 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      4 unique,     4 total,    358 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+   2403 unique,  9994 total, 400787 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+  21973 leak(s) beyond -report_leak_max
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-bash.32492.000/results.txt

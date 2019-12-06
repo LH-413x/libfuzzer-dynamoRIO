@@ -1,0 +1,22 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+Dr. Memory results for pid 2074: "ps"
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+     56 unique,   165 total, 301505 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-ps.2074.000/results.txt

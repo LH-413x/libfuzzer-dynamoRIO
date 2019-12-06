@@ -1,0 +1,374 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+Dr. Memory results for pid 32462: "dash"
+Recorded 17 suppression(s) from default /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/bin64/suppress-default.txt
+
+WARNING: application is missing line number information.
+
+Error #1: UNINITIALIZED READ: reading 0x00007ffd6f3888f8-0x00007ffd6f3888fc 4 byte(s) within 0x00007ffd6f3888e0-0x00007ffd6f388938
+# 0 system call rt_sigaction
+# 1 dash!?                                +0x0      (0x00007f23c891634f <dash+0x1234f>)
+# 2 dash!?                                +0x0      (0x00007f23c891660f <dash+0x1260f>)
+# 3 dash!?                                +0x0      (0x00007f23c8912a7c <dash+0xea7c>)
+# 4 dash!?                                +0x0      (0x00007f23c8912fbb <dash+0xefbb>)
+# 5 dash!?                                +0x0      (0x00007f23c89088e4 <dash+0x48e4>)
+# 6 libc.so.6!__libc_start_main            [../csu/libc-start.c:310]
+# 7 dash!?                                +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:00.328 in thread 32462
+
+Error #2: UNINITIALIZED READ: reading 0x00007ffd6f3888f8-0x00007ffd6f3888fc 4 byte(s) within 0x00007ffd6f3888e0-0x00007ffd6f388938
+# 0 system call rt_sigaction
+# 1 dash!?                                +0x0      (0x00007f23c891634f <dash+0x1234f>)
+# 2 dash!?                                +0x0      (0x00007f23c8916619 <dash+0x12619>)
+# 3 dash!?                                +0x0      (0x00007f23c8912a7c <dash+0xea7c>)
+# 4 dash!?                                +0x0      (0x00007f23c8912fbb <dash+0xefbb>)
+# 5 dash!?                                +0x0      (0x00007f23c89088e4 <dash+0x48e4>)
+# 6 libc.so.6!__libc_start_main            [../csu/libc-start.c:310]
+# 7 dash!?                                +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:00.329 in thread 32462
+
+Error #3: UNINITIALIZED READ: reading 0x00007ffd6f388908-0x00007ffd6f38890c 4 byte(s) within 0x00007ffd6f3888f0-0x00007ffd6f388948
+# 0 system call rt_sigaction
+# 1 dash!?                                +0x0      (0x00007f23c891634f <dash+0x1234f>)
+# 2 dash!?                                +0x0      (0x00007f23c8912a7c <dash+0xea7c>)
+# 3 dash!?                                +0x0      (0x00007f23c8912fbb <dash+0xefbb>)
+# 4 dash!?                                +0x0      (0x00007f23c89088e4 <dash+0x48e4>)
+# 5 libc.so.6!__libc_start_main            [../csu/libc-start.c:310]
+# 6 dash!?                                +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:00.329 in thread 32462
+
+Error #4: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 6 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 7 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 8 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #5: UNINITIALIZED READ: reading register rax
+# 0 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 1 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 2 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 3 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 4 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 5 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 6 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 7 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %rax %rax
+
+Error #6: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #7: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.234 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #8: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 6 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 7 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 8 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #9: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #10: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.240 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #11: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #12: UNINITIALIZED READ: reading register rax
+# 0 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 1 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 2 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 3 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 6 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 7 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 8 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %rax %rax
+
+Error #13: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.251 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #14: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.252 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #15: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #16: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #17: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.253 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #18: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #19: UNINITIALIZED READ: reading register rax
+# 0 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 1 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 2 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 3 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 6 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 7 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 8 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+# 9 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %rax %rax
+
+Error #20: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 8 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 9 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+#10 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#11 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #21: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ebad <dash+0xabad>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 8 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 9 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+#10 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#11 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.260 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #22: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 8 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+# 9 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#10 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %edx %edx
+
+Error #23: UNINITIALIZED READ: reading register eax
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 8 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 9 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+#10 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#11 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %eax %eax
+
+Error #24: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42       [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                         +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                         +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                         +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                         +0x0      (0x00007f23c890a52e <dash+0x652e>)
+# 6 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 7 dash!?                         +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 8 dash!?                         +0x0      (0x00007f23c891166e <dash+0xd66e>)
+# 9 dash!?                         +0x0      (0x00007f23c89089de <dash+0x49de>)
+#10 libc.so.6!__libc_start_main     [../csu/libc-start.c:310]
+#11 dash!?                         +0x0      (0x00007f23c8908a4a <dash+0x4a4a>)
+Note: @0:00:01.262 in thread 32462
+Note: instruction: test   %edx %edx
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      2
+	Error #   2:      2
+	Error #   3:      2
+	Error #   4:      3
+	Error #   8:      2
+	Error #   9:      2
+	Error #  10:      2
+	Error #  11:      3
+	Error #  15:      2
+	Error #  16:      2
+	Error #  17:      2
+	Error #  18:      3
+	Error #  22:      2
+	Error #  23:      2
+	Error #  24:      2
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+     24 unique,    42 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+     28 unique,   109 total,  19446 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-dash.32462.000/results.txt

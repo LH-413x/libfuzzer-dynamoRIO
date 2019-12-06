@@ -1,0 +1,100 @@
+# Suppression for Error #1
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+bash!termsig_sighandler
+bash!give_terminal_to
+bash!make_child
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!reader_loop
+bash!main
+
+## Mod+offs-style suppression for Error #1:
+UNINITIALIZED READ
+name=Error #1 (update to meaningful name)
+<bash+0x70d62>
+<bash+0x5797b>
+<bash+0x57bc7>
+<bash+0x2e572>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x32274>
+<bash+0x30c7f>
+
+# Suppression for Error #2
+LEAK
+name=Error #2 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!set_default_locale
+bash!main
+
+## Mod+offs-style suppression for Error #2:
+LEAK
+name=Error #2 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x80b3b>
+<bash+0x2fe67>
+
+# Suppression for Error #3
+LEAK
+name=Error #3 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!_init
+bash!execute_command_internal
+bash!execute_command
+bash!reader_loop
+bash!main
+
+## Mod+offs-style suppression for Error #3:
+LEAK
+name=Error #3 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x2e559>
+<bash+0x460d8>
+<bash+0x47bf2>
+<bash+0x32274>
+<bash+0x30c7f>
+
+# Suppression for Error #4
+LEAK
+name=Error #4 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!tilde_expand
+bash!bash_tilde_expand
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #4:
+LEAK
+name=Error #4 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0xce35e>
+<bash+0x3fa74>
+<bash+0x8cfbf>
+<bash+0x30b37>
+
+# Suppression for Error #5
+LEAK
+name=Error #5 (update to meaningful name)
+libdrmemorylib.so!replace_malloc
+bash!xmalloc
+bash!*
+bash!maybe_execute_file
+bash!main
+
+## Mod+offs-style suppression for Error #5:
+LEAK
+name=Error #5 (update to meaningful name)
+<libdrmemorylib.so+0x482c0>
+<bash+0x870de>
+<bash+0x8cc91>
+<bash+0x8cfd7>
+<bash+0x30b37>
+

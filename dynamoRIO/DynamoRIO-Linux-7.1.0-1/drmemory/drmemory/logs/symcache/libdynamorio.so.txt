@@ -1,0 +1,56 @@
+Dr. Memory symbol cache version 14
+      1047,1701920,0
+1
+memalign,0x0
+malloc,0x0
+posix_memalign,0x0
+mallopt,0x0
+mallinfo,0x0
+cfree,0x0
+tc_free,0x0
+(anonymous namespace)::do_malloc,0x0
+calloc,0x0
+tc_malloc_size,0x0
+tc_new,0x0
+tc_cfree,0x0
+malloc_get_state,0x0
+malloc_set_state,0x0
+tc_deletearray,0x0
+operator delete[] nothrow,0x0
+operator delete[],0x0
+valloc,0x0
+pvalloc,0x0
+realloc,0x0
+__libc_pvalloc,0x0
+__libc_mallopt,0x0
+operator new,0x0
+__libc_memalign,0x0
+__libc_mallinfo,0x0
+__libc_realloc,0x0
+__libc_malloc,0x0
+__libc_calloc,0x0
+__libc_valloc,0x0
+tc_posix_memalign,0x0
+operator delete,0x0
+__libc_free,0x0
+operator delete nothrow,0x0
+tc_newarray,0x0
+tc_mallopt,0x0
+free,0x0
+operator new nothrow,0x0
+(anonymous namespace)::do_free_with_callback,0x0
+malloc_usable_size,0x0
+(anonymous namespace)::do_memalign,0x0
+malloc_trim,0x0
+independent_calloc,0x0
+independent_comalloc,0x0
+tc_delete,0x0
+operator new[],0x0
+operator new[] nothrow,0x0
+malloc_stats,0x0
+tc_malloc,0x0
+tc_calloc,0x0
+tc_valloc,0x0
+tc_memalign,0x0
+tc_mallinfo,0x0
+tc_realloc,0x0

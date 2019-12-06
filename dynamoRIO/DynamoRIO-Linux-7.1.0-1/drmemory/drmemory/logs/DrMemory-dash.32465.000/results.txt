@@ -1,0 +1,97 @@
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+
+Error #1: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42     [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                       +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+# 5 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+# 6 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+# 7 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 8 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 9 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#10 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+#11 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+#12 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+#13 dash!?                       +0x0      (0x00007f23c890b305 <dash+0x7305>)
+#14 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#15 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#16 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#17 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#18 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#19 dash!?                       +0x0      (0x00007f23c891166e <dash+0xd66e>)
+Note: @0:00:00.003 in thread 32465
+Note: instruction: test   %edx %edx
+
+Error #2: UNINITIALIZED READ: reading register esi
+# 0 libc.so.6!__strpbrk_sse42     [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                       +0x0      (0x00007f23c890eb8f <dash+0xab8f>)
+# 2 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 3 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 4 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+# 5 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+# 6 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+# 7 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 8 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 9 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#10 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+#11 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+#12 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+#13 dash!?                       +0x0      (0x00007f23c890b305 <dash+0x7305>)
+#14 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#15 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#16 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#17 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#18 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#19 dash!?                       +0x0      (0x00007f23c891166e <dash+0xd66e>)
+Note: @0:00:00.003 in thread 32465
+Note: instruction: test   %esi %esi
+
+Error #3: UNINITIALIZED READ: reading register edx
+# 0 libc.so.6!__strpbrk_sse42     [../sysdeps/x86_64/multiarch/strcspn-c.c:165]
+# 1 dash!?                       +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                       +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+# 6 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+# 7 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+# 8 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 9 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#10 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#11 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+#12 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+#13 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+#14 dash!?                       +0x0      (0x00007f23c890b305 <dash+0x7305>)
+#15 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#16 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#17 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#18 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#19 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+Note: @0:00:00.004 in thread 32465
+Note: instruction: test   %edx %edx
+
+Error #4: UNINITIALIZED READ: reading register esi
+# 0 libc.so.6!__strpbrk_sse42     [../sysdeps/x86_64/multiarch/strcspn-c.c:167]
+# 1 dash!?                       +0x0      (0x00007f23c890d9b3 <dash+0x99b3>)
+# 2 dash!?                       +0x0      (0x00007f23c890ec9f <dash+0xac9f>)
+# 3 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 4 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+# 5 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+# 6 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+# 7 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+# 8 dash!?                       +0x0      (0x00007f23c890b200 <dash+0x7200>)
+# 9 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#10 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#11 dash!?                       +0x0      (0x00007f23c890b8f3 <dash+0x78f3>)
+#12 dash!?                       +0x0      (0x00007f23c890e7fc <dash+0xa7fc>)
+#13 dash!?                       +0x0      (0x00007f23c890eae1 <dash+0xaae1>)
+#14 dash!?                       +0x0      (0x00007f23c890b305 <dash+0x7305>)
+#15 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#16 dash!?                       +0x0      (0x00007f23c890a592 <dash+0x6592>)
+#17 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#18 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+#19 dash!?                       +0x0      (0x00007f23c890a49e <dash+0x649e>)
+Note: @0:00:00.004 in thread 32465
+Note: instruction: test   %esi %esi

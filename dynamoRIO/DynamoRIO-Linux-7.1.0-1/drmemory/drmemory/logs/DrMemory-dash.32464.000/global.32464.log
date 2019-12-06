@@ -1,0 +1,36 @@
+process=32464, parent=32462
+Dr. Memory version 1.11.2 build 1 built on Feb 22 2019 14:53:34
+new thread #1 id=32464
+new logfile after fork
+start time: 3671862:31:04.911 == 06:31:04.911 11/20/2019
+
+DUPLICATE ERROR COUNTS:
+
+SUPPRESSIONS USED:
+	     2x (leaked    4504 bytes): default (ld-linux stores index+1)
+
+NO ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      0 unique,     0 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      0 ignored assumed-innocuous system leak(s)
+     78 unique,   192 total,  61885 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-dash.32464.000/results.txt
+
+DUPLICATE POTENTIAL ERROR COUNTS:
+
+NO POTENTIAL ERRORS FOUND:
+      0 unique,     0 total potential unaddressable access(es)
+      0 unique,     0 total potential uninitialized access(es)
+      0 unique,     0 total potential invalid heap argument(s)
+      0 unique,     0 total potential warning(s)
+      0 unique,     0 total,      0 byte(s) of potential leak(s)
+      0 unique,     0 total,      0 byte(s) of potential possible leak(s)
+Details: /home/alex/tools/fuzzer/dynamorio/7.1.0-1-build/drmemory/drmemory/logs/DrMemory-dash.32464.000/potential_errors.txt
+Exiting @0:00:00.507 in thread 32464
+LOG END
